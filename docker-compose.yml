@@ -1,0 +1,14 @@
+services:
+  linealalrl:
+    build: .
+    container_name: linealalrl
+    restart: unless-stopped
+    # Descomentar para mostrar el enlace «← Reox Lab» en el encabezado (default: 0).
+    # environment:
+    #   - LINEALALRL_BRAND_LINK=1
+    networks:
+      - sky-net
+
+networks:
+  sky-net:
+    external: true

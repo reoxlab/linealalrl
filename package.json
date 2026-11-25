@@ -1,0 +1,24 @@
+{
+  "name": "linealalrl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "description": "Álgebra lineal en el navegador: matrices, sistemas, valores propios y condicionamiento — Reox Lab",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "trap 'rm -f ./.tmp-test.mjs' EXIT; for f in tests/test-*.ts; do esbuild \"$f\" --bundle --platform=node --format=esm --outfile=./.tmp-test.mjs --log-level=error && node ./.tmp-test.mjs || exit 1; done"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "rl-ui": "github:reoxlab/rl-ui#c07066e6"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  }
+}
